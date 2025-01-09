@@ -16,11 +16,11 @@
 
     body {
       margin: 0;
-      background-size: contain;
+      background-size:auto;
       overflow-x: hidden;
       background-color: #000000;
-      background-image: url('/src/images/aaaaaa.avif');
-      background-repeat: no-repeat; /* Repeat the pattern across the page */
+      background-image: url('/src/images/tj8.jpeg');
+      background-repeat:repeat; /* Repeat the pattern across the page */
   
     }  
     
@@ -257,7 +257,7 @@ nav {
   margin-top: 30px;
   padding: 20px 30px;
   font-size: 2em;
-  background-color: rgba(120, 56, 154, 0.915);
+  background-image: linear-gradient(75deg, #00e0ff, #7000ff 48%, #ff6868);
   color: white;
   border: 2px solid;
   border-radius: 20px;
