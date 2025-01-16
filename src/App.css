@@ -849,7 +849,7 @@ nav {
   color: rgb(255, 255, 255);
 }
 
-/* New additions for Follow Us section */
+/* Follow Us Section */
 .footer-section .social-links {
   display: flex;
   justify-content: center;
@@ -867,7 +867,7 @@ nav {
 }
 
 .footer-section .social-links a:hover {
-  color: #f0c419;
+  color: #c4faf6;
 }
 
 .footer-section .social-links img {
@@ -885,7 +885,6 @@ nav {
 .footer-section .social-links span {
   font-size: 2rem;
 }
-
 
 /* Footer right with location and Google Maps link */
 .footer-section .footer-right {
@@ -925,5 +924,62 @@ nav {
   transform: scale(1.2);
 }
 
+/* Mobile View */
+@media (max-width: 768px) {
+  .footer-section {
+    padding: 1rem;
+    font-size: 1rem;
+  }
 
+  .footer-section h2 {
+    font-size: 3rem;
+  }
 
+  .footer-section p {
+    font-size: 1.5rem;
+    padding: 5px;
+  }
+
+  .footer-section #p2 {
+    font-size: 1.2rem;
+  }
+
+  .footer-section .social-links {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center; /* Centers items horizontally */
+    justify-content: center; /* Centers items vertically */
+    gap: 0.5rem;
+  }
+  
+
+  .footer-section .social-links a {
+    font-size: 1rem;
+  }
+
+  .footer-section .social-links img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .footer-section .social-links span {
+    font-size: 1.5rem;
+  }
+
+  .footer-section .footer-right h3 {
+    font-size: 1.5rem;
+  }
+
+  .footer-section .footer-right p {
+    font-size: 1.2rem;
+  }
+
+  .footer-section .footer-right .location-link {
+    font-size: 1rem;
+  }
+
+  .footer-section .footer-right .location-link img {
+    width: 20px;
+    height: 20px;
+  }
+}

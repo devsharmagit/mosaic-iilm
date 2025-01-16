@@ -240,10 +240,10 @@ const HeroSection = () => {
     <img src="twitter.png" alt="" /> <span>Twitter</span>
   </a>
   <a href="https://www.face.com/" target="_blank" rel="noopener noreferrer">
-    <img src="m3.png" alt="" /> <span>Facebook</span>
+    <img src="fb.png" alt="" /> <span>Facebook</span>
   </a>
   <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-    <img src="dance.png" alt="" className="yt" /> <span>Youtube</span>
+    <img src="yt.png" alt="" className="yt" /> <span>Youtube</span>
   </a>
 </div>
   </div>
@@ -257,7 +257,7 @@ const HeroSection = () => {
       rel="noopener noreferrer" 
       className="location-link"
     >
-      <img src="location.png" alt="" />
+      <img src="m11.png" alt="" />
       View on Google Maps
     </a>
   </div>
