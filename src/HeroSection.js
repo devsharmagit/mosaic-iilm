@@ -239,13 +239,13 @@ const HeroSection = () => {
     <h2>Follow Us On</h2>
     <div className="social-links">
     <a href="https://instagram.com/aaghaz_iilm/" target="_blank" rel="noopener noreferrer">
-    <img src="insta.png" alt="" /> <span> Aaghaaz IILM</span>
+    <img src="insta.png" alt="" /> <span> <p>Aaghaaz IILM</p></span>
   </a>
   <a href="https://www.instagram.com/mosaic.annualfest/" target="_blank" rel="noopener noreferrer">
-    <img src="insta.png" alt="" /> <span>Mosaic Annual Fest</span>
+    <img src="insta.png" alt="" /> <span><p>Mosaic Annual Fest</p></span>
   </a>
   <a href="https://www.instagram.com/mosaic.annualfest/" target="_blank" rel="noopener noreferrer">
-    <img src="unstop.png" alt="" /> <span>Unstop</span>
+    <img src="unstop.png" alt="" /> <span><p>Unstop</p></span>
   </a>
   
 </div>
