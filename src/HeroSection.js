@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-
+// ------------ countdown timer starts here ------------
 const HeroSection = () => {
   const [timeLeft, setTimeLeft] = useState({
     days: 0,
@@ -13,12 +13,12 @@ const HeroSection = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   const calculateTimeLeft = () => {
-    const eventDate = new Date("February 1, 2025 00:00:00").getTime();
+    const eventDate = new Date("February 28, 2025 00:00:00").getTime();
     const now = new Date().getTime();
     const distance = eventDate - now;
 
     if (distance <= 0) {
-      return null; // Event expired
+      return null; // ------------ event expires ------------
     }
 
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -31,7 +31,7 @@ const HeroSection = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // 768px is the breakpoint for mobile
+      setIsMobile(window.innerWidth <= 768); //  768px is the breakpoint for mobile
     };
 
     handleResize(); // Call once on initial load
@@ -60,9 +60,11 @@ const HeroSection = () => {
     container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
   };
 
+  // ------------ countdown timer ends here ------------
+
   return (
     <div>
-      {/* Hero Section */}
+      {/* ------------ hero section starts here ------------ */}
       <section id="home" className="hero-section">
         <div className="image-section">
           <div className="hero-content">
@@ -82,12 +84,12 @@ const HeroSection = () => {
         </div>
       </section>
 
-      {/* About Mosaic Section - Desktop and Mobile view */}
+      {/* ------------ about mosaic mobile and desktop ------------ */}
       <section id="about" className="about-section">
         <h2>About Mosaic</h2>
 
         {isMobile ? (
-          // Mobile View Content
+          // ------------ mobile view content ------------
           <>
             <p><strong>MOSAIC 2025</strong> – IILM University's three-day cultural extravaganza is here! 🎉 Join us on <strong>30th, 31st January, and 1st February</strong> for an unforgettable celebration of <strong>talent, creativity, and innovation</strong>.</p>
             <p>With over <strong>a decade of legacy</strong>, Mosaic features <strong>electrifying music</strong>, <strong>dance battles</strong>, <strong>drama</strong>, and <strong>artistic showcases</strong>, attracting <strong>5000+ daily visitors</strong>.</p>
@@ -95,7 +97,7 @@ const HeroSection = () => {
             <p>Don’t miss the magic of <strong>MOSAIC 2025</strong> – where creativity and camaraderie shine! ✨</p>
           </>
         ) : (
-          // Desktop View Content
+          // ------------ desktop view content ------------
           <>
             <p>Brace yourselves for <strong>MOSAIC 2025</strong> – IILM University's grand three-day cultural extravaganza, happening on <strong>30th, 31st January, and 1st February</strong>!<br />
             Known as one of the most awaited events of the year, Mosaic is where <strong>talent meets creativity</strong>, and the <strong>spirit of youth</strong> shines bright.</p>
@@ -111,7 +113,7 @@ const HeroSection = () => {
         )}
       </section>
 
-      {/* Events Section */}
+      {/* ------------ events section ------------ */}
       <section id="events" className="events-section">
   <h2>Event Details</h2>
   <div className="events-slider">
@@ -229,22 +231,23 @@ const HeroSection = () => {
     <p style={{ textDecoration: "underline" }}>
   mosaic@iilm.edu
 </p>
+<p style={{ textDecoration: "underline" }}>
+  Zulkar Nain: +91 8082882315,<br/>Nandani: +91 9354486770
+</p>
 
     <br/>
     <h2>Follow Us On</h2>
     <div className="social-links">
-  <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
-    <img src="insta.png" alt="" /> <span>Instagram</span>
+    <a href="https://instagram.com/aaghaz_iilm/" target="_blank" rel="noopener noreferrer">
+    <img src="insta.png" alt="" /> <span> Aaghaaz IILM</span>
   </a>
-  <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer">
-    <img src="twitter.png" alt="" /> <span>Twitter</span>
+  <a href="https://www.instagram.com/mosaic.annualfest/" target="_blank" rel="noopener noreferrer">
+    <img src="insta.png" alt="" /> <span>Mosaic Annual Fest</span>
   </a>
-  <a href="https://www.face.com/" target="_blank" rel="noopener noreferrer">
-    <img src="fb.png" alt="" /> <span>Facebook</span>
+  <a href="https://www.instagram.com/mosaic.annualfest/" target="_blank" rel="noopener noreferrer">
+    <img src="unstop.png" alt="" /> <span>Unstop</span>
   </a>
-  <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
-    <img src="yt.png" alt="" className="yt" /> <span>Youtube</span>
-  </a>
+  
 </div>
   </div>
 

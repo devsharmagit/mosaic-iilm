@@ -1,3 +1,5 @@
+/* ----------- local fonts ----------- */
+
 @font-face {
   font-family: 'Alike Regular';
   font-style: normal;
@@ -6,15 +8,16 @@
   }
 
 
- @font-face {
+@font-face {
     font-family: 'Georgia Pro Cond';
     font-style: normal;
     font-weight: normal;
     src: local('Georgia Pro Cond'), url('./fonts/GeorgiaPro-CondRegular.woff') format('woff');
     }
 
+/* ----------- local fonts end here ----------- */
 
-    body {
+body {
       margin: 0;
       background-size:contain;
       overflow-x: hidden;
@@ -30,28 +33,30 @@ html {
   scroll-behavior: smooth;
 }
 
+/* ----------- hero section starts here ----------- */
+
 
 .hero {
   display: flex;
-  justify-content: center; /* Horizontally center the logo */
-  align-items: center; /* Vertically center the logo */
-  height: 100vh; /* Make the hero section take up the entire viewport height */
-  background-color: #f0f0f0; /* Background color */
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  background-color: #f0f0f0; 
   position: relative;
 }
 
 .hero-logo {
-  max-width: 80%; /* Ensure the logo scales within the hero section */
-  height: auto; /* Maintain aspect ratio */
+  max-width: 80%; 
+  height: auto; 
   animation: smooth-glow3 2s infinite;
   text-align: center;
   transition: opacity 0.5s ease-in-out;
-  position: relative; /* Allows additional positioning tweaks */
-  top: -150px; /* Adjust this to position it vertically */
-  left: 0; /* Adjust this to position it horizontally */
+  position: relative; 
+  top: -150px; 
+  left: 0; 
 }
 
-
+/* ----------- nav bar ----------- */
 
 header {
   position: fixed;
@@ -88,6 +93,7 @@ nav {
   padding: 0;
   font-weight: 500;
 }
+
 .mobile__nav{
   position: absolute;
   width: 100vw;
@@ -171,7 +177,9 @@ nav {
 .auth-links a:hover {
   transform: scale(1.2);
   color: coral;
-}
+} 
+
+/* ----------- nav bar ends here ----------- */
 
 .hero-section {
   padding: 0 20px;
@@ -192,6 +200,8 @@ nav {
   text-align: center;
 }
 
+/* ----------- glowing effect logo ----------- */
+
 @keyframes smooth-glow {
   0% {
     opacity: 0.8;
@@ -207,16 +217,17 @@ nav {
   }
 }
 
+/* ----------- h1, h2 customization ----------- */
+
 .hero-content h1 {
   font-family: 'Georgia Pro Cond';
   font-style: normal;
   color: rgb(255, 255, 255);
-  font-size: 15em; /* Increase the font size to a larger value */
+  font-size: 15em; 
   animation: smooth-glow 5s infinite;
   text-align: center;
   transition: opacity 0.5s ease-in-out;
 }
-
 
 
 .hero-content h2 {
@@ -227,7 +238,10 @@ nav {
   text-align: center;
 }
 
+/* ----------- countdown timer ----------- */
+
 #countdown-timer {
+  font-family: 'Alike Regular';
   font-size: 5em;
   color: rgb(255, 255, 255);
   border: 3px solid rgb(178, 169, 231);
@@ -241,13 +255,16 @@ nav {
   animation: smooth-glow 1s infinite;
   -webkit-text-stroke: 0.1px rgb(0, 0, 0);
   
-  /* Adding the background image */
+  /* ----------- to add any background image ----------- */
   background-image: url('');
   background-size: contain;        
   background-position: center;    
   background-repeat: repeat;   
 }
 
+/* ----------- countdown ends here ----------- */
+
+/* ----------- register button ----------- */
 
 .hero-content .btn {
   font-family: 'Georgia Pro Cond';
@@ -269,6 +286,11 @@ nav {
   transform: scale(1.05);
 }
 
+/* ----------- register button ends here ----------- */
+
+/* ----------- image rotator (removed now) ----------- 
+
+
 @keyframes rotateImage {
   0% {
     transform: rotate(0deg);
@@ -286,9 +308,9 @@ nav {
   height: 500px;
   animation: rotateImage 300s linear infinite;
   border-radius: 50%;
-  z-index: 9999; /* Highest z-index to bring it to the front */
-  pointer-events: none; /* Prevent it from blocking interactions with other elements */
-} */
+  z-index: 9999; 
+  pointer-events: none; 
+} 
 
 
 .rotating-image2{
@@ -327,6 +349,11 @@ nav {
   z-index: 10;
 }
 
+ ----------- image rotator ends here ----------- */
+
+
+ /* ----------- event details ----------- */
+
 
 .event-section {
   display: flex;
@@ -338,6 +365,8 @@ nav {
   color: white;
   background-color: transparent;
 }
+
+/* ----------- h1, h2, p customization ----------- */
 
 .event-section h1, h2{
   font-family: 'Georgia Pro Cond';
@@ -354,25 +383,31 @@ nav {
   margin-bottom: 20px;
 }
 
+/* ----------- event details behaviour ----------- */
+
 .events-container {
   display: flex;
   padding: 20px;
   scroll-snap-type: x mandatory;
-  overflow-x: auto; /* Enable horizontal scroll */
+  overflow-x: auto; 
   position: relative;
-  gap: 20px; /* Space between cards */
-  scrollbar-width: none; /* Hide scrollbar for Firefox */
-  -ms-overflow-style: none; /* Hide scrollbar for IE and Edge */
+  gap: 20px; 
+  /* ----------- hides scrollbar for firefox, edge ----------- */
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
 }
 
+/* ----------- hides scrollbar for chrome, safari ----------- */
 .events-container::-webkit-scrollbar {
-  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  display: none; 
 }
+
+/* ----------- event cards ----------- */
 
 .events-container .event {
   scroll-snap-align: center;
-  width: 33.33%; /* Adjusted for 3 cards in the slider */
-  flex-shrink: 0; /* Prevent the event items from shrinking */
+  width: 33.33%; 
+  flex-shrink: 0; 
   background-color: rgba(36, 36, 36, 0.8);
   color: white;
   border: 2px solid;
@@ -385,8 +420,8 @@ nav {
   display: inline-block;
   font-size: larger;
   border-style: none;
-  background-size: cover;  /* Ensures the background image covers the entire box */
-  background-position: center;  /* Centers the image within the box */
+  background-size: cover;  
+  background-position: center; 
   background-blend-mode: overlay;
   background-repeat: no-repeat;
   border: 3px solid rgb(178, 169, 231);
@@ -422,9 +457,10 @@ nav {
 .events-slider {
   position: relative;
   width: 100%;
-  overflow: hidden; /* Keeps the slider content within bounds */
+  overflow: hidden; 
 }
 
+/* ----------- register buttons ----------- */
 
 .btn1 {
   
@@ -449,7 +485,9 @@ nav {
   cursor: pointer;
 }
 
+/* ----------- event details ends here ----------- */
 
+/* ----------- about section for desktop ----------- */
 
 .about-section {
   display: flex;
@@ -463,6 +501,8 @@ nav {
   color: white;
   background-color: transparent;
 }
+
+/* ----------- h2, p, p2 ----------- */
 
 .about-section h2 {
   font-size: 5rem;
@@ -484,7 +524,7 @@ nav {
   color: rgb(255, 255, 255);
 }
 
-/*second*/
+/* ----------- about section for mobile ----------- */
 
 .about-section1 {
   display: flex;
@@ -501,6 +541,8 @@ nav {
   background-color: transparent;
   padding-bottom: 30px;
 }
+
+/* ----------- h2, p, p2 ----------- */
 
 .about-section1 h2 {
   font-size: 5rem;
@@ -521,9 +563,11 @@ nav {
   font-size: 1.4rem;
   color: rgb(255, 255, 255);
 }
-/* Media Queries */
 
-/* Mobile Devices */
+/* ----------- about section ends here ----------- */
+
+/* ----------- media query mobile ----------- */
+
 @media screen and (max-width: 650px) {
   nav {
     font-size: 1rem;
@@ -603,7 +647,8 @@ nav {
   }
 }
 
-/* Tablet Devices */
+/* ----------- media query tablet ----------- */
+
 @media screen and (max-width: 1023px) {
 
 .rotating-image,
@@ -639,7 +684,8 @@ nav {
   }
 }
 
-/* Desktop Devices */
+/* ----------- media query desktop devices ----------- */
+
 @media screen and (min-width: 1024px) {
   nav {
     font-size: 1rem;
@@ -671,14 +717,15 @@ nav {
 
 .a1 {
   color: yellow;
-  text-decoration: none; /* Optional: Removes underline */
+  text-decoration: none; 
 }
 
 .a1:hover {
-  color: lightgray; /* Optional: Changes color on hover */
+  color: lightgray; 
 }
 
-/* Default gallery container and grid styles */
+/* ----------- gallery section ----------- */
+
 .gallery-container {
   display: flex;
   flex-direction: column;
@@ -690,130 +737,138 @@ nav {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Adjust column count as needed */
-  grid-auto-rows: 120px; /* Default row height */
+  grid-template-columns: repeat(4, 1fr); 
+  grid-auto-rows: 120px; 
   gap: 10px;
   width: 100%;
   max-width: 1200px;
   flex-grow: 1;
 }
 
-/* Photo styles with varying sizes */
+/* ----------- photo style with varying sizes ----------- */
+
 .photo {
   border-radius: 10px;
-  background-size: cover; /* Ensures the image covers the entire container */
-  background-position: center; /* Ensures the image is centered */
-  background-repeat: no-repeat; /* Prevents repeating the image */
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
 }
 
 .photo.small {
   grid-column: span 2;
   grid-row: span 3;
-  background-image: url('images/m10.gif'); /* Image for small photos */
+  background-image: url('images/m2.png'); 
 }
 .photo.small2 {
   grid-column: span 2;
   grid-row: span 3;
-  background-image: url('images/m5.png'); /* Image for small photos */
+  background-image: url('images/m5.png'); 
 }
 .photo.medium {
   grid-column: span 1;
   grid-row: span 2;
-  background-image: url('images/m2.png'); /* Image for medium photos */
+  background-image: url('images/m10.gif'); 
 }
 
 .photo.large {
   grid-column: span 1;
   grid-row: span 2;
-  background-image: url('images/m4.png'); /* Image for large photos */
+  background-image: url('images/m4.png'); 
 }
 
 .photo.tall {
   grid-column: span 2;
   grid-row: span 3;
-  background-image: url('images/m6.png'); /* Image for tall photos */
+  background-image: url('images/m6.png'); 
 }
 
 .photo.wide {
   grid-column: span 2;
   grid-row: span 4;
-  background-image: url('images/m7.png'); /* Image for wide photos */
+  background-image: url('images/m7.png'); 
 }
 
 .photo.wide2 {
   grid-column: span 2;
   grid-row: span 3;
-  background-image: url('images/m3.png'); /* Image for wide2 photos */
+  background-image: url('images/m3.png'); 
 }
 
-/* Mobile view adjustments */
+/* ----------- mobile view adjustments ----------- */
+
 @media (max-width: 768px) {
   .gallery-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for mobile */
-    grid-auto-rows: 150px; /* Adjust row height */
+    grid-template-columns: repeat(2, 1fr); 
+    grid-auto-rows: 150px; 
   }
 
-  /* Hide photos beyond the first 4 */
+
   .gallery-grid .photo:nth-child(n+5) {
     display: none;
   }
 
-  /* Adjust photo size and span for mobile view */
+
   .photo.small {
     grid-column: span 2;
     grid-row: span 2;
-    background-image: url('images/m10.gif'); /* Image for small photos */
+    background-image: url('images/m2.png');
   }
 
   .photo.medium {
     grid-column: span 1;
     grid-row: span 2;
-    background-image: url('images/m2.png'); /* Image for medium photos */
+    background-image: url('images/m10.gif'); 
   }
 
   .photo.large {
     grid-column: span 1;
     grid-row: span 2;
-    background-image: url('images/m4.png'); /* Image for large photos */
+    background-image: url('images/m5.png'); 
   }
 
   .photo.tall {
     grid-column: span 2;
     grid-row: span 2;
-    background-image: url('images/m6.png'); /* Image for tall photos */
+    background-image: url('images/m4.png'); 
   }
 
   .photo.wide {
     grid-column: span 2;
     grid-row: span 2;
-    background-image: url('images/mosaic.png'); /* Image for wide photos */
+    background-image: url('images/mosaic.png'); 
   }
 
   .photo.wide2 {
     grid-column: span 2;
     grid-row: span 2;
-    background-image: url('images/mosaic.png'); /* Image for wide2 photos */
+    background-image: url('images/mosaic.png'); 
   }
 }
 
-/* Further adjustments for very small screens (e.g., phones in portrait mode) */
+/* ----------- media query very small devices ( portrait mode ) ----------- */
 @media (max-width: 480px) {
   .gallery-grid {
-    grid-template-columns: 1fr; /* 1 column for very small screens */
-    grid-auto-rows: 200px; /* Larger row height for better visibility */
+    grid-template-columns: 1fr; 
+    grid-auto-rows: 200px; 
   }
 
-  /* Hide photos beyond the first 4 for very small screens */
+ 
   .gallery-grid .photo:nth-child(n+5) {
     display: none;
   }
 
-  /* Make all photos span full width for very small screens */
+ 
   .photo {
     grid-column: span 1;
     grid-row: span 1;
   }
 }
+
+/* ----------- gallery section ends here  ----------- */
+
+/* ----------- footer starts here ----------- */
+
+/* ----------- contact us ----------- */
 
 .footer-section {
   display: flex;
@@ -849,7 +904,8 @@ nav {
   color: rgb(255, 255, 255);
 }
 
-/* Follow Us Section */
+/* ----------- follow us ----------- */
+
 .footer-section .social-links {
   display: flex;
   justify-content: center;
@@ -886,7 +942,8 @@ nav {
   font-size: 2rem;
 }
 
-/* Footer right with location and Google Maps link */
+/* ----------- location and google map ----------- */
+
 .footer-section .footer-right {
   margin-top: 2rem;
   text-align: center;
@@ -924,7 +981,8 @@ nav {
   transform: scale(1.2);
 }
 
-/* Mobile View */
+/* ----------- media query mobile ----------- */ 
+
 @media (max-width: 768px) {
   .footer-section {
     padding: 1rem;
@@ -947,8 +1005,8 @@ nav {
   .footer-section .social-links {
     display: flex;
     flex-direction: column-reverse;
-    align-items: center; /* Centers items horizontally */
-    justify-content: center; /* Centers items vertically */
+    align-items: center; 
+    justify-content: center; 
     gap: 0.5rem;
   }
   
@@ -983,3 +1041,5 @@ nav {
     height: 20px;
   }
 }
+
+/* ----------- footer section ends here ----------- */
