@@ -404,7 +404,12 @@ nav {
 
 /* ----------- event cards ----------- */
 
+#events{
+padding-bottom: 100px;
+}
+
 .events-container .event {
+  min-width: 300px;
   scroll-snap-align: center;
   width: 33.33%; 
   flex-shrink: 0; 
@@ -495,11 +500,12 @@ nav {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100%;
   font-size: 1em;
   text-align: center;
   color: white;
   background-color: transparent;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 /* ----------- h2, p, p2 ----------- */
@@ -619,18 +625,13 @@ nav {
 
   .event {
     width: 90%;
-    height: 250px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     font-size: 1.2rem;
   }
 
-  .events-container {
-    flex-direction: column;
-    align-items: center;
-  }
+  
 
-  .events-container .event {
-    width: 90%;
-  }
 
   .arrow-btn {
     font-size: 1em;
@@ -730,7 +731,6 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 160vh;
   padding: 20px;
   box-sizing: border-box;
 }
@@ -875,9 +875,7 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  width: 100%;
-  margin-top: -80px;
+  padding: 1rem;
   font-size: 1.2em;
   text-align: center;
   color: white;
